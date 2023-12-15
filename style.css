@@ -1,0 +1,27 @@
+header {
+    max-width: 1920px;
+    max-height: 120px;
+    border: 3px solid red;
+}
+
+header .buscador-usuario .buscador {
+    border: 3px solid rgb(0, 3, 165);
+    display: flex;
+    align-items: center;
+}
+
+header .buscador-usuario .buscador img {
+    width: 30px;
+    height: 30px;
+}
+
+header .buscador-usuario .usuario {
+    border: 3px solid greenyellow;
+    display: flex;
+}
+
+header .buscador-usuario .usuario img {
+    width: 30px;
+    height: 30px;
+}
+
