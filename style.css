@@ -1,5 +1,10 @@
+body {
+    margin: 0;
+}
+
 header .contenedor {
     display: flex;
+    margin-top: 25px;
 }
 
 header .contenedor .buscador-usuario {
@@ -71,8 +76,11 @@ header .buscador-usuario .usuario img {
 
 header .noticias {
     background-color: rgba(55, 252, 203, 0.877);
-    height: 15px;
+    height: 35px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -88,13 +96,18 @@ header .noticias {
 
         /* LOGO */
 header .logo {
-    width: 150px;
-    height: 150px;
+    width: 158px;
+    height: 158px;
     overflow: hidden;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    margin-top: -2%;
 }
 
 header .logo img {
@@ -102,4 +115,15 @@ header .logo img {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+}
+
+
+header .menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+    background-color: rgba(55, 252, 203, 0.877);
+    height: 50px;
 }
