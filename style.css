@@ -1,16 +1,38 @@
-body {
+
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+* {
     margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;    
 }
 
+a:link{
+    color: #4CCBAD;
+}
+
+a:visited {
+    color: #4CCBAD;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 header .contenedor {
     display: flex;
     margin-top: 25px;
+    width: 1440px;
 }
 
 header .contenedor .buscador-usuario {
     display: flex;
     justify-content: space-between;
     width: 1920px;
+    margin-bottom: 10px;
 }
 
         /* BUSCADOR */
@@ -21,6 +43,12 @@ header .contenedor .buscador-usuario .buscador {
     height: 35px;
     gap: 10px;
     margin-left:15px;
+    color: #4CCBAD;
+}
+
+header .contenedor .buscador-usuario .buscador input {
+    border: none;
+    border-bottom: 2px solid #4CCBAD;
 }
 
 header .buscador-usuario .buscador img {
@@ -52,6 +80,7 @@ header .contenedor .buscador-usuario .usuario {
     width: 500px;
     justify-content: end;
     margin-right: 15px;
+    color: #4CCBAD;
 }
 
 header .contenedor .buscador-usuario .usuario .ingresar {
@@ -74,15 +103,37 @@ header .buscador-usuario .usuario img {
 
 
 
-header .noticias {
-    background-color: rgba(55, 252, 203, 0.877);
-    height: 35px;
+.noticias {
+    background-color: #4CCBAD;
+    color: white;
+    height: 20px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Agrega este estilo al final de tu archivo style.css */
+.noticias {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .noticias span {
+    display: inline-block;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    animation: carruselNoticias 45s linear infinite; /* Ajusta la duración según tus preferencias */
+  }
+  
+  @keyframes carruselNoticias {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
 
 
 
@@ -107,7 +158,8 @@ header .logo {
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
-    margin-top: -2%;
+    margin-top: 80px;
+    border: 15px solid white;
 }
 
 header .logo img {
@@ -115,15 +167,127 @@ header .logo img {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+
+    transition: transform 1s ease;
+}
+
+.logo img:hover {
+    transform: rotate(360deg); /* Aplica la rotación de 360 grados al pasar el ratón sobre la imagen */
+  }
+
+
+header .menu {
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #4CCBAD;
+    height: 45px;
+    border-top: 1px solid #4CCBAD;
+    border-bottom: 1px solid #4CCBAD;
+    font-size: 19px;
+    width: 1440px;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+    border-bottom: 3px solid transparent;
+    box-sizing: border-box; /* Añade esta línea para incluir el borde en el tamaño total del elemento */
+    margin-right: 30px;
+  }
+  
+  .menu li:hover {
+    border-bottom: 4px solid #4CCBAD;
+  }
+
+
+/* Agrega este estilo al final de tu archivo style.css */
+.menu ul ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    width: 150px;
+    border: none;
+    padding-top: 15px;
+}
+
+.menu li:hover > ul {
+    display: block;
+}
+
+.menu ul ul li {
+    width: 100%;
+    text-align: left;
+    background-color: #fff; /* Color de fondo de cada elemento del submenú */
+}
+
+.menu ul ul a {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+}   
+
+.menu ul ul a:hover {
+    background-color: #4CCBAD;
+    color: white;
 }
 
 
-header .menu ul{
-    list-style: none;
+
+
+
+
+
+
+
+
+
+
+        /*BANNER*/
+section .banner {
+    width: 1920px;
+    height: 760px;
+    overflow: hidden;
+    margin-top: 10px;
+
+}
+
+section .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+section .info {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 60px 0 60px;
+    color: #4CCBAD;
+}
+
+section .info div {
+    display: flex;
+    justify-items: center;
     align-items: center;
-    margin-top: 5%;
-    background-color: rgba(55, 252, 203, 0.877);
-    height: 50px;
+    gap: 10px;
+}
+
+section .info img {
+    width: 30px;
+    height: 30px;
 }
